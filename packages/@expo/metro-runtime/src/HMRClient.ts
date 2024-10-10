@@ -150,7 +150,8 @@ const HMRClient: HMRClientNativeInterface = {
     assert(!hmrClient, 'Cannot initialize hmrClient twice');
 
     const serverScheme = window.location.protocol === 'https:' ? 'wss' : 'ws';
-    const client = new MetroHMRClient(`${serverScheme}://${window.location.host}/hot`);
+    const host = global.metroHost || window.location.host
+    const client = new MetroHMRClient(`${serverScheme}://${host}/hot`);
     hmrClient = client;
 
     const { fullBundleUrl } = getDevServer();
@@ -168,7 +169,7 @@ const HMRClient: HMRClientNativeInterface = {
  - Ensure the Metro dev server is running and available on the same network as this device`;
       error += `
  
- URL: ${window.location.host}
+ URL: ${host}
  
  Error: ${e.message}`;
 
