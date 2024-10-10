@@ -71,11 +71,11 @@ export function LogBoxInspectorSourceMapStatus(props: Props) {
   let color;
   switch (props.status) {
     case 'FAILED':
-      image = require('@expo/metro-runtime/assets/alert-triangle.png');
+      image = require('@exodus/expo-metro-runtime/assets/alert-triangle.png');
       color = LogBoxStyle.getErrorColor(1);
       break;
     case 'PENDING':
-      image = require('@expo/metro-runtime/assets/loader.png');
+      image = require('@exodus/expo-metro-runtime/assets/loader.png');
       color = LogBoxStyle.getWarningColor(1);
       break;
   }

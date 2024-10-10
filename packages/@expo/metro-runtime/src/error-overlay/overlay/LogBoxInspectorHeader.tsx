@@ -45,7 +45,7 @@ export function LogBoxInspectorHeader(props: Props) {
         <LogBoxInspectorHeaderButton
           disabled={total <= 1}
           level={props.level}
-          image={require('@expo/metro-runtime/assets/chevron-left.png')}
+          image={require('@exodus/expo-metro-runtime/assets/chevron-left.png')}
           onPress={() => props.onSelectIndex(prevIndex)}
         />
         <View style={styles.title}>
@@ -54,7 +54,7 @@ export function LogBoxInspectorHeader(props: Props) {
         <LogBoxInspectorHeaderButton
           disabled={total <= 1}
           level={props.level}
-          image={require('@expo/metro-runtime/assets/chevron-right.png')}
+          image={require('@exodus/expo-metro-runtime/assets/chevron-right.png')}
           onPress={() => props.onSelectIndex(nextIndex)}
         />
       </View>

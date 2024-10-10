@@ -94,7 +94,7 @@ function Dismiss({ onPress }: { onPress: () => void }) {
         <View
           style={[dismissStyles.press, hovered && { opacity: 0.8 }, pressed && { opacity: 0.5 }]}>
           <Image
-            source={require('@expo/metro-runtime/assets/close.png')}
+            source={require('@exodus/expo-metro-runtime/assets/close.png')}
             style={dismissStyles.image}
           />
         </View>
