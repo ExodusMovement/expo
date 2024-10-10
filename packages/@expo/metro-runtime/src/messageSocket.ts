@@ -4,7 +4,8 @@
 // This is normally setup on the native client.
 
 const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-const messageSocket = new WebSocket(`${protocol}://${window.location.host}/message`);
+const host = global.metroHost || window.location.host
+const messageSocket = new WebSocket(`${protocol}://${host}/message`);
 messageSocket.onmessage = (message) => {
   const data = JSON.parse(String(message.data));
   switch (data.method) {
