@@ -1,6 +1,6 @@
 {
   "name": "@exodus/expo-metro-runtime",
-  "version": "3.2.1-exodus.0",
+  "version": "3.2.1-exodus.1",
   "description": "Tools for making advanced Metro bundler features work",
   "sideEffects": true,
   "main": "src",
